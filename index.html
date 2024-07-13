@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="mobile">
+        <div class="logoMobile">
+            <img src="img/logo-shopshop.png" alt="">
+        </div>
+        <div id="menuMobile" class="menu-moblie">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="menu-moblie-content">
+                <div class="logo">
+                    <img src="img/logo-shopshop.png" alt="">
+                </div>
+
+                <div class="login-regis">
+
+                    <form action="">
+                        <input type="text" placeholder="username :">
+                        <input type="password" placeholder="password :">
+                    </form>
+
+                    <div class="btn-login-regis">
+                        <a href="#"><button>submit</button></a>
+                        <a href="#"><button>register</button></a>
+                    </div>  
+
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="#aboutus">ABOUT US</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+
+                    <div class="dropdown">                        
+                        <button class="dropbtn">CATEGORIES </button>
+                        <div class="dropdown-content">
+                            <a href="index.html">All Products</a>
+                            <a href="index.html?category=jewelery">Jewelery</a>
+                            <a href="index.html?category=men's%20clothing">Men's Clothing</a>
+                            <a href="index.html?category=women's%20clothing">Women's Clothing</a>
+                            <a href="index.html?category=electronics">Electronics</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order">
+                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>                    
+                </div>
+            </div>
+        </div>
+        <span class="menu-mobile-icon" onclick="openNav()">&#9776; </span>
+    </div>
+
+    <main>
+
+        <nav>
+            <div class="side-bar">
+
+                <div class="logo">
+                    <img src="img/logo-shopshop.png" alt="">
+                </div>
+
+                <div class="login-regis">
+
+                    <form action="">
+                        <input type="text" placeholder="username :">
+                        <input type="password" placeholder="password :">
+                    </form>
+
+                    <div class="btn-login-regis">
+                        <a href="#"><button>submit</button></a>
+                        <a href="#"><button>register</button></a>
+                    </div>  
+
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="#aboutus">ABOUT US</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+
+                    <div class="dropdown">                        
+                        <button class="dropbtn">CATEGORIES </button>
+                        <div class="dropdown-content">
+                            <a href="index.html">All Products</a>
+                            <a href="index.html?category=jewelery">Jewelery</a>
+                            <a href="index.html?category=men's%20clothing">Men's Clothing</a>
+                            <a href="index.html?category=women's%20clothing">Women's Clothing</a>
+                            <a href="index.html?category=electronics">Electronics</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order">
+                    <a href="#"><i class="fa fa-star fa-lg" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></a>                    
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="product">
+
+            <h2>CATEGORY</h2>
+
+            <div class="product-category-img">
+                <a href="index.html?category=jewelery">
+                    <img src="img/jewelery.jpg" alt="">
+                    <span>jewelery</span>
+                </a>
+                <a href="index.html?category=men's%20clothing">
+                    <img src="img/men's clothing.jpg" alt="">
+                    <span>men's clothing</span>
+                </a>
+                <a href="index.html?category=women's%20clothing">
+                    <img src="img/women's clothing.jpg" alt="">
+                    <span>women's clothing</span>
+                </a>
+                <a href="index.html?category=electronics">
+                    <img src="img/electronics.jpg" alt="">
+                    <span>electronics</span>
+                </a>
+            </div>
+
+            <h2 style="padding-top: 15px;">PRODUCT LIST</h2>
+
+            <div id="product-list" class="product-list">
+                <!-- ที่จะแสดงผลข้อมูลสินค้า -->
+            </div>
+
+            <div id="pagination" class="pagination" style="margin-bottom: 20px;">
+                <!-- Pagination buttons will be added here -->
+            </div>
+
+            <div id="product-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="modal-product-content">
+                        <!-- รายละเอียดสินค้าจะแสดงที่นี่ -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="aboutus-con" id="aboutus">
+                <h2>ABOUT US</h2>
+                <div class="img-aboutus">
+                    <img src="img/shopshop-aboutus.jpg" alt="">
+                </div>
+                <div class="text-aboutus">
+                    
+                    <h3>SHOPSHOP E-commerce: การเปลี่ยนแปลงประสบการณ์การช้อปออนไลน์</h3>
+                    <p>ในโลกของอีคอมเมิร์ซที่เติบโตอย่างรวดเร็ว SHOPSHOP ยืนอยู่เป็นตัวอย่างของนวัตกรรมและการให้บริการที่โดดเด่นด้วยความเชื่อในความสะดวกสบายและความสนุกสนานของการช้อปปิ้งออนไลน์ SHOPSHOP ได้ก้าวเข้าสู่การเป็นชื่อเสียงอย่างรวดเร็วเป็นสัญลักษณ์ของความเชื่อมั่น ความหลากหลาย และการบริการที่ยอดเยี่ยม</p>
+
+                    <h3>จุดเริ่มต้นที่มีวิสัยทัศน์</h3>
+                    <p>เริ่มต้นขึ้นจากความเชื่อว่าการช้อปปิ้งควรเป็นเรื่องที่สะดวกและมีความสุข SHOPSHOP ได้เริ่มต้นด้วยภารกิจชัดเจนที่จะเชื่อมต่อผู้บริโภคกับผลิตภัณฑ์ในหลากหลายแบบฉบับที่ไม่ยากเย็น ตั้งแต่เริ่มแรก บริษัทจึงให้ความสำคัญกับประสบการณ์ผู้ใช้และการก้าวหน้าทางเทคโนโลยี เป็นที่โด่งดังในตลาดที่แออัด</p>
+
+                    <h3>ประสบการณ์ SHOPSHOP</h3>
+                    <p>ที่ SHOPSHOP ประสบการณ์การช้อปปิ้งไม่ได้หมายถึงการซื้อขายเพียงอย่างเดียว แต่เป็นการสำรวจโลกของความเป็นไปได้ แพลตฟอร์มมีอินเตอร์เฟซที่ใช้งานง่ายทำให้ลูกค้าสามารถนำทางไปยังหมวดหมู่ต่างๆ ที่มีตั้งแต่อิเล็กทรอนิกส์ แฟชั่น ไปจนถึงของใช้ในบ้านและอื่นๆ ทุกผลิตภัณฑ์ถูกคัดสรรอย่างพิถีพิถันเพื่อความคุณภาพและความเชื่อถือ</p>
+
+                    <h3>การยอมรับความหลากหลายและการสร้างความร่วมมือ</h3>
+                    <p>ความหลากหลายอยู่ใจกลางในหลักการของ SHOPSHOP แพลตฟอร์มเชิงวัฒนธรรมและวิถีชีวิตโดยการนำเสนอผลิตภัณฑ์ที่ตอบสนองความต้องการและความชอบหลายๆ รูปแบบ ไม่ว่าจะเป็นการค้นหาผลิตภัณฑ์ศิลปะจากช่างฝีมือท้องถิ่นหรือเทคโนโลยีล้ำสมัยจากแบรนด์ชั้นนำทั่วโลก SHOPSHOP มุ่งเน้นที่จะให้แพลตฟอร์มที่ทุกคนสามารถค้นพบสิ่งที่ตรงกับเสน่ห์และการเลือกของส่วนตัวได้</p>
+
+                    <h3>นวัตกรรมในเทคโนโลยี</h3>
+                    <p>เป็นส่วนสำคัญของความสำเร็จของ SHOPSHOP คือการใช้เทคโนโลยีในการเสริมประสิทธิภาพของประสบการณ์การช้อปปิ้ง อัลกอริธึมขั้นสูงจัดทำการแนะนำสินค้าที่ปรับให้เหมาะกับประวัติการเรียกดูและความชอบของลูกค้า นอกจากนี้การผนวกการเชื่อมต่อกับเกตเวย์การชำระเงินที่ปลอดภัยและโลจิสติกที่มีประสิทธิภาพ ทำให้สามารถจัดส่งสินค้าได้รวดเร็ว เสริมความเชื่อมั่นและความถูกต้องในผู้บริโภค</p>               
+                </div>
+            </div>
+
+
+            <div id="contact">
+                <h2 style="padding-top: 30px;">CONTACT</h2>
+                <div class="contact-con">
+
+                    <div class="contact-info">
+                        <label for="firstname">First Name</label>
+                        <br>
+                        <input type="text" id="firstname" name="firstname" placeholder="Please enter your first name...">
+                        <br>
+                        <label for="lastname">Last Name</label>
+                        <br>
+                        <input type="text" id="lastname" name="lastname" placeholder="Please enter your last name...">
+                        <br>
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com">
+                        <br>
+                        <label for="country">Country</label>
+                        <br>
+                        <select name="country" id="country">
+                        <option value="thailand">Thailand</option>
+                        <option value="china">China</option>
+                        <option value="japan">Japan</option>
+                        <option value="usa">USA</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="canada">Canada</option>
+                        <option value="germany">Germany</option>
+                        <option value="france">France</option>
+                        <option value="italy">Italy</option>
+                        </select>
+                        <br>
+                        <label for="subject">Subject</label>
+                        <br>
+                        <textarea name="subject" id="subject" placeholder="Write something..."></textarea>
+                        <br>
+                        <input onclick="alert('Thank you for contact us')" type="submit" value="Submit">
+                    </div>
+
+                </div>
+            </div>
+
+            <footer>
+                <div>
+                    <p>© 2024 SHOPSHOP E-commerce Footer</p>
+                </div>
+            </footer>
+
+        </div>
+
+        
+
+    </main>
+
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
